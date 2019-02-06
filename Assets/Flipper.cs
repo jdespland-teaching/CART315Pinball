@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Flipper : MonoBehaviour
 {
+    public Score thescore;
     public string button = "LeftFlipper";
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class Flipper : MonoBehaviour
         if (Input.GetButton(button))
         {
             this.GetComponent<HingeJoint>().useMotor = true;
+            thescore.ResetMultiplier();
         }
         else
         {
